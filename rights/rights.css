@@ -22,11 +22,12 @@ p{
 }
 ol{
   list-style-type: none;
-  counter-reset: elementcounter;
+  counter-reset: mycounter;
   padding-left: 0;
 }
-li{
-  content: "AMENDMENT " counter(elementcounter);
+li:before{
+  content: "AMENDMENT " counter(mycounter, upper-roman);
+  counter-increment:mycounter;
   margin-left: 24pt;
   font-size: 24pt;
   font-family: Quattrocento;
