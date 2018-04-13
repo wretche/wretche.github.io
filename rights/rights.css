@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Lora|Quattrocento');
+
+body {
+  background-image: url(tess2.jpg);
+  color: blue;
+  font-family: arial;
+}
+h1{
+  font-size: 100pt;
+  font-family: Cinzel;
+  letter-spacing: -50;
+}
+h2{
+  font-size: 24pt;
+  font-family: Quattrocento;
+  text-transform: uppercase;
+  letter-spacing: 100;
+}
+p{
+  font-size: 15pt;
+  font-family: Lora;
+}
+ol{
+  margin-left: 24pt;
+  font-size: 24pt;
+  font-family: Quattrocento;
+  text-transform: uppercase;
+  letter-spacing: 100;
+  list-style-type: upper-roman;
+}
