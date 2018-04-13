@@ -2,7 +2,7 @@
 
 body {
   background-image: url(tess2.jpg);
-  color: blue;
+  color: navy;
   font-family: arial;
 }
 h1{
@@ -21,10 +21,15 @@ p{
   font-family: Lora;
 }
 ol{
+  list-style-type: none;
+  counter-reset: elementcounter;
+  padding-left: 0;
+}
+li{
+  content: "AMENDMENT " counter(elementcounter);
   margin-left: 24pt;
   font-size: 24pt;
   font-family: Quattrocento;
   text-transform: uppercase;
   letter-spacing: 100;
-  list-style-type: upper-roman;
 }
