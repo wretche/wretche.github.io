@@ -6,18 +6,18 @@ body {
   font-family: arial;
 }
 h1{
-  font-size: 100pt;
+  font-size: 8.33em;
   font-family: Cinzel;
-  letter-spacing: -50;
+  letter-spacing: -0.05em;
 }
 h2{
-  font-size: 24pt;
+  font-size: 2em;
   font-family: Quattrocento;
   text-transform: uppercase;
-  letter-spacing: 100;
+  letter-spacing: 0.1em;
 }
 p{
-  font-size: 15pt;
+  font-size: 1.25em;
   font-family: Lora;
 }
 ol{
@@ -28,9 +28,9 @@ ol{
 li:before{
   content: "AMENDMENT " counter(mycounter, upper-roman);
   counter-increment:mycounter;
-  margin-left: 24pt;
-  font-size: 24pt;
+  margin-left: 2em;
+  font-size: 2em;
   font-family: Quattrocento;
   text-transform: uppercase;
-  letter-spacing: 100;
+  letter-spacing: 0.1em;
 }
