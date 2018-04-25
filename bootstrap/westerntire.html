@@ -17,14 +17,93 @@
       margin-bottom: 25px;
       width: 80%;
       height: auto;
-      opacity: 0.7;
+
     }
     .portrate:hover {
       border-color: #ffdead;
     }
+    .carousel-inner img {
+      -webkit-filter: sepia(90%);
+      -o-filter: sepia(90%);
+      filter: sepia(90%);
+      width: 100%;
+      margin: auto;
+    }
+    .carousel-caption h2 {
+      color: #fff !important;
+    }
+    .navbar {
+      margin-bottom: 0;
+      background-color: #2d2d2d;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 3px;
+      opacity: 0.9;
+    }
+    .navbar li a .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+    }
+    .navbar-nav li a:hover{
+      color: #fff !important;
+    }
+    .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+    }
+    .navbar-default .navbar-toggle{
+      border-color: transparent;
+    }
+    .open .dropdown-toggle{
+      color: #fff !important;
+      background-color: #555 !important;
+    }
+    .dropdown-menu li a{
+      color: #000 !important;
+    }
+    .dropdown-menu li a:hover {
+      background-color: red !important;
+    }
+    @media (max-width: 600px) {
+      .carousel-caption {
+        display: none;
+      }
+    }
+
   </style>
 </head>
 <body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">LOGO</a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#one">one</a></li>
+          <li><a href="#twoe">two</a></li>
+          <li><a href="#three">three</a></li>
+          <li><a href="#four">four</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Five</a></li>
+              <li><a href="#">Six</a></li>
+              <li><a href="#">Seven</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><span class="glyphicon glyphicon-search"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <div id="thecarousel" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#thecarousel" data-slide-to="0" class="active"></li>
@@ -72,11 +151,11 @@
     <p><strong>Sidney MT</strong></p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident, minus!</p>
     <br>
-    <div class"row">
+    <div class="row">
       <div class="col-sm-4">
         <p class="text-center"><strong>name</strong></p>
         <a href="#tom" data-toggle="collapse">
-          <img src="bootstrap-stack.png" class="image-circle portrate" alt="boot">
+          <img src="person.png" class="image-circle portrate" alt="boot">
         </a>
         <div id="tom" class="collapse">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, commodi? </p>
@@ -87,7 +166,7 @@
       <div class="col-sm-4">
         <p class="text-center"><strong>name</strong></p>
         <a href="#jerrold" data-toggle="collapse">
-          <img src="bootstrap-stack.png" class="image-circle portrate" alt="boot">
+          <img src="person.png" class="image-circle portrate" alt="boot">
         </a>
         <div id="jerrold" class="collapse">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, commodi? </p>
@@ -98,7 +177,7 @@
       <div class="col-sm-4">
         <p class=text-center><strong>name</strong></p>
         <a href="#kris" data-toggle="collapse">
-          <img src="bootstrap-stack.png" class="image-circle portrate" alt="boot">
+          <img src="person.png" class="image-circle portrate" alt="boot">
         </a>
         <div id="kris" class="collapse">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, commodi? </p>
