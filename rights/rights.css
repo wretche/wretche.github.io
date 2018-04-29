@@ -20,12 +20,12 @@ p{
   font-size: 1.25em;
   font-family: Lora;
 }
-ol{
+.amend ol{
   list-style-type: none;
   counter-reset: mycounter;
   padding-left: 0;
 }
-li:before{
+.amend li:before{
   content: "AMENDMENT " counter(mycounter, upper-roman);
   counter-increment:mycounter;
   margin-left: 2em;
