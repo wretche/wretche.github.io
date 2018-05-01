@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>Baxter Resume</title>
   <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="nav.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
 		body {color:#020a19; background-image: url(blobs.jpg);}
 		img.right {float:right;}
@@ -12,9 +17,42 @@
     div.main{margin: auto; border: 3px solid green; width: 70%; background-color: oldlace; }
 	</style>
 </head>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/index.html">Baxter</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/bootstrap/index.html">Bootstrap</a></li>
+        <li><a href="#twoe">two</a></li>
+        <li><a href="/bootstrap/westerntire.html">Example</a></li>
+        <li><a href="/bootstrap/pong.html">PONG</a></li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/index.html">Home Page</a></li>
+            <li><a href="/freedom.html">Freedom</a></li>
+            <li><a href="/factoring.html">Factoring</a></li>
+            <li><a href="/rights/index.html">Rights</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
 <body id="top">
   <div class="main">
-    
+
   <h1>
     Shane Baxter
   </h1>
