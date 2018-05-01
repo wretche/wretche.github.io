@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <title>Western Tire</title>
   <style>
     .container {
@@ -68,11 +69,18 @@
     .dropdown-menu li a:hover {
       background-color: red !important;
     }
+    #googleMap {
+        width: 100%; /* Span the entire width of the screen */
+        height: 400px; /* Set the height to 400 pixels */
+    }
+
     @media (max-width: 600px) {
       .carousel-caption {
         display: none;
       }
     }
+
+
 
   </style>
 </head>
@@ -224,5 +232,16 @@
       </div>
     </div>
   </div>
+  <div id="googleMap"></div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(47.70119, -104.168319);
+var mapProp = {center:myCenter, zoom:17, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVn4cfjvjSR_YQhzw1KlyDjHNxY5wDnDI&callback=myMap"></script>
 </body>
 </html>
