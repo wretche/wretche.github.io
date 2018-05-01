@@ -2,8 +2,14 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <title>Factoring Trinomial using AC Method</title>
-		<link rel="stylesheet" type="text/css" href="factor.css">
+  <title>Factoring Trinomial using AC Method</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="nav.css">
+	<link rel="stylesheet" type="text/css" href="factor.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -40,49 +46,52 @@
 		</div>
 	</nav>
 
-    <h1>
-    	Factoring Trinomial using AC Method
-    </h1>
+  <div class="jumbotron text-center">
+		<h1>
+  	Factoring Trinomial using AC Method
+  	</h1>
+	</div>
 
-	<h2>
-		Solve: 6<var>x</var><sup>3</sup> - 40<var>x</var><sup>2</sup> + 56<var>x</var>
-	</h2>
+	<div class="container">
+		<h2>
+			Solve: 6<var>x</var><sup>3</sup> - 40<var>x</var><sup>2</sup> + 56<var>x</var>
+		</h2>
 
-	<p>
-		Step 1: <strong>2<var>x</var> [ 3<var>x</var><sup>2</sup> - 20<var>x</var> + 28 ]</strong> &nbsp;&nbsp;&nbsp;&nbsp;Factor out anything common to all terms
-	</p>
+		<p>
+			Step 1: <strong>2<var>x</var> [ 3<var>x</var><sup>2</sup> - 20<var>x</var> + 28 ]</strong> &nbsp;&nbsp;&nbsp;&nbsp;Factor out anything common to all terms
+		</p>
 
-	<p>
-		Step 2: <strong>2<var>x</var> [ 3<var>x</var><sup>2</sup> <mark>+ (-20)</mark><var>x</var> + 28 ]</strong> &nbsp;&nbsp;&nbsp;&nbsp;Write trinomial in standard form <var>ax</var><sup>2</sup> + <var>bx</var> + <var>c</var>
-	</p>
+		<p>
+			Step 2: <strong>2<var>x</var> [ 3<var>x</var><sup>2</sup> <mark>+ (-20)</mark><var>x</var> + 28 ]</strong> &nbsp;&nbsp;&nbsp;&nbsp;Write trinomial in standard form <var>ax</var><sup>2</sup> + <var>bx</var> + <var>c</var>
+		</p>
 
-	<p>
-		Step 3: <strong>2<var>x</var> [ <mark>3</mark><var>x</var><sup>2</sup> + <mark>(-20)</mark><var>x</var> + 28 ]</strong> &nbsp;&nbsp;&nbsp;&nbsp;Determine product of  <var>a&middot;c</var> = 3&middot;28 = 84
-	</p>
+		<p>
+			Step 3: <strong>2<var>x</var> [ <mark>3</mark><var>x</var><sup>2</sup> + <mark>(-20)</mark><var>x</var> + 28 ]</strong> &nbsp;&nbsp;&nbsp;&nbsp;Determine product of  <var>a&middot;c</var> = 3&middot;28 = 84
+		</p>
 
-	<p>
-		Step 4: List all pairs of factors of <var>a&middot;c</var> is negative, then factors have opposite signs. If <var>a&middot;c</var> is positive, then factors have same signs. Sign of <var>b</var> determines sign of factors.<br>Factors of 84 are: <strong>-1, -84 &nbsp;&nbsp;-4, -21 &nbsp;&nbsp;<mark>-6,-14</mark> &nbsp;&nbsp;-7, 12</strong><br>Select factor pair such that their sum is <var>b</var> term = <strong><mark>-20</mark></strong>
-	</p>
+		<p>
+			Step 4: List all pairs of factors of <var>a&middot;c</var> is negative, then factors have opposite signs. If <var>a&middot;c</var> is positive, then factors have same signs. Sign of <var>b</var> determines sign of factors.<br>Factors of 84 are: <strong>-1, -84 &nbsp;&nbsp;-4, -21 &nbsp;&nbsp;<mark>-6,-14</mark> &nbsp;&nbsp;-7, 12</strong><br>Select factor pair such that their sum is <var>b</var> term = <strong><mark>-20</mark></strong>
+		</p>
 
-	<p>
-		Step 5: Split middle term b order factors as muliple of the a and c terms<br><strong>2x [ 3<var>x</var><sup>2</sup> + <mark>(-6)<var>x</var> +(-14)<var>x</var></mark> + 28 ]</strong>
-	</p>
+		<p>
+			Step 5: Split middle term b order factors as muliple of the a and c terms<br><strong>2x [ 3<var>x</var><sup>2</sup> + <mark>(-6)<var>x</var> +(-14)<var>x</var></mark> + 28 ]</strong>
+		</p>
 
-	<p>
-		Step 6: Factor out something common to first two terms.<br><strong>2<var>x</var> [ <mark>3<var>x</var><sup>2</sup> + (-6)<var>x</var></mark> + (-14)<var>x</var> + 28 ] &rarr; 2<var>x</var> [ 3<var>x</var><mark>(<var>x</var> - 2)</mark> + (-14)<var>x</var> + 28 ]</strong>
-	</p>
+		<p>
+			Step 6: Factor out something common to first two terms.<br><strong>2<var>x</var> [ <mark>3<var>x</var><sup>2</sup> + (-6)<var>x</var></mark> + (-14)<var>x</var> + 28 ] &rarr; 2<var>x</var> [ 3<var>x</var><mark>(<var>x</var> - 2)</mark> + (-14)<var>x</var> + 28 ]</strong>
+		</p>
 
-	<p>
-		Step 7: Factor out same binomial in last two terms.<br><strong>2<var>x</var> [ 3<var>x</var><mark>(<var>x</var> - 2)</mark> + (-14)<mark>(<var>x</var> - 2)</mark> ]</strong>
-	</p>
+		<p>
+			Step 7: Factor out same binomial in last two terms.<br><strong>2<var>x</var> [ 3<var>x</var><mark>(<var>x</var> - 2)</mark> + (-14)<mark>(<var>x</var> - 2)</mark> ]</strong>
+		</p>
 
-	<p>
-		Step 8: Apply Distributive Law and convert trinomial into the product of two binomials and monomial.<br><strong>2<var>x</var> [ <mark>(3<var>x</var> - 14)</mark>(<var>x</var> - 2) ] &rarr; <mark>2<var>x</var>(3<var>x</var> -14)(<var>x</var> - 2)</mark></strong> This is the answer
-	</p>
-
-<p>
-	<a href="index.html"><img src="mbuttons.gif" alt="Back to Home Page!">&larr; Back to home page</a>
-</p>
+		<p>
+			Step 8: Apply Distributive Law and convert trinomial into the product of two binomials and monomial.<br><strong>2<var>x</var> [ <mark>(3<var>x</var> - 14)</mark>(<var>x</var> - 2) ] &rarr; <mark>2<var>x</var>(3<var>x</var> -14)(<var>x</var> - 2)</mark></strong> This is the answer
+		</p>
+		<p>
+			<a href="index.html"><img src="mbuttons.gif" alt="Back to Home Page!">&larr; Back to home page</a>
+		</p>
+	</div>
 
 
 </body>
