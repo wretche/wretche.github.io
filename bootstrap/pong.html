@@ -182,7 +182,7 @@
     function drawEverything() {
 
         // next line blanks out the screen with black
-        colorRect(0,0,canvas.width,canvas.height, 'black');
+        colorRect(0,0,canvas.width,canvas.height, 'blue');
         if(showingWinScreen){
           canvascontext.fillStyle = "white";
 
@@ -196,12 +196,12 @@
         }
         //drawNet();
         //left player paddle
-        colorRect(0,paddle1Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'white');
+        colorRect(0,paddle1Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'yellow');
         //right paddle
-        colorRect(canvas.width-PADDLE_THICKNESS,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'white');
+        colorRect(canvas.width-PADDLE_THICKNESS,paddle2Y,PADDLE_THICKNESS,PADDLE_HEIGHT, 'red');
         //ball
         drawNet();
-        colorCircle(ballX, ballY, 10, 'white');
+        colorCircle(ballX, ballY, 10, 'green');
 
         canvascontext.fillText(player1Score, 100, 100);
         canvascontext.fillText(player2Score, canvas.width-100, 100);
