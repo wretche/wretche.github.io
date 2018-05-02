@@ -29,3 +29,68 @@
 .dropdown-menu li a:hover {
   background-color: red !important;
 }
+.bg-1 {
+  background-color: #a24c00; color:#fff;
+  width: 100%;
+}
+.bg-2{
+  background-color: #ffefad; color: #000;
+  width: 100%;
+}
+.bg-3{
+  background-color: #a20006; color: #fff;
+  width: 100%;
+}
+.bg-4{
+  background-color: #a29d00; color: #fff;
+  width: 100%;
+}
+.bg-5 {
+  background-color: #2f2f2f; color: #fff;
+  width: 100%;
+}
+
+.container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-right: 0; /*15px in bootstrap.css*/
+  padding-left: 0;  /*idem*/
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.portrate {
+  border: 10px solid transparent;
+  margin-bottom: 25px;
+  width: 80%;
+  height: auto;
+
+}
+.portrate:hover {
+  border-color: #ffdead;
+}
+
+.carousel-inner img {
+  -webkit-filter: sepia(90%);
+  -o-filter: sepia(90%);
+  filter: sepia(90%);
+  -webkit-filter: brightness(100%);
+  -o-filter: brightness(100%);
+  filter: brightness(100%);
+  width: auto;
+  max-height: 600px !important;
+  margin: auto;
+}
+
+.carousel-caption {
+  color: #fff !important;
+  text-shadow: 2px 2px black;
+}
+.boot {
+  width: 25em; height: auto;
+  background-color: yellow;
+}
+.container-fluid .dasboot{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
