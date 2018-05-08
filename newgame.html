@@ -1,17 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <meta content="utf-8" http-equiv="encoding">
+  <title>Brick Breaker</title>
+
 <body>
-  <h1>Brick Breaker</h1>
   <canvas id="gameCanvas" width="800" height="600"></canvas>
 
   <script>
-  var canvas,canvasContext;
+  var ballX = 75;
+  var ballY = 75;
+  var ballSpeedX = 5;
+  var ballSpeedY = 7;
+
+  const BRICK_W = 100;
+  const BRICK_H = 50;
+  const BRICK_COUNT = 7;
+  var brickGrid = new Array(BRICK_COUNT);
+
+  const PADDLE_WIDTH = 100;
+  const PADDLE_THICKNESS = 10;
+  const PADDLE_DIST_FROM_EDGE = 60;
+  var paddleX = 400;
+
+  var canvas, canvasContext;
+
+  var mouseX = 0;
+  var mouseY = 0;
+
+  function updateMousePos(evt) {
+    var rect = canvas.getBoundingClientRect();
+    var root = document.documentElement;
+
+    mouseX = evt.clientX - rect.left - root.scrollLeft;
+    mouseY = evt.clientY - rect.top - root.scrollTop;
+
+    paddleX = mouseX - PADDLE_WIDTH/2;
+  }
+
+  function brickReset() {
+    for(var i=0;i<BRICK_COUNT;i++) {
+      brickGrid[i] = true;
+    }
+  }
 
   window.onload = function() {
     canvas = document.getElementById('gameCanvas');
@@ -20,18 +52,104 @@
     var framesPerSecond = 30;
     setInterval(updateAll, 1000/framesPerSecond);
 
+    canvas.addEventListener('mousemove', updateMousePos)
+
+    brickReset()
   }
 
   function updateAll() {
-    canvasContext.fillStyle = 'black';
-    canvasContext.fillRect(0,0, canvas.width, canvas.height);
+    moveAll();
+    drawAll();
+  }
 
-    canvasContext.fillStyle = 'white';
+  function ballReset() {
+    ballX = canvas.width/2;
+    ballY = canvas.height/2;
+  }
+
+  function moveAll() {
+    ballX += ballSpeedX;
+    ballY += ballSpeedY;
+
+    if(ballX > canvas.width || ballX < 0) {
+      ballSpeedX *= -1;
+    }
+    if(ballY < 0) {
+      ballSpeedY *= -1;
+    }
+    if(ballY > canvas.height) {
+      ballReset();
+    }
+
+    var paddleTopEdgeY = canvas.height-PADDLE_DIST_FROM_EDGE;
+    var paddleBottomEdgeY = paddleTopEdgeY + PADDLE_THICKNESS;
+    var paddleLeftEdgeX = paddleX;
+    var paddleRightEdgeX = paddleX + PADDLE_WIDTH;
+
+    if (ballY > paddleTopEdgeY &&
+        ballY < paddleBottomEdgeY &&
+        ballX > paddleLeftEdgeX &&
+        ballX < paddleRightEdgeX) {
+
+          ballSpeedY *= -1;
+
+          var centerOfPaddleX = paddleX + PADDLE_WIDTH/2;
+          var ballDistFromPaddleCenterX = ballX - centerOfPaddleX;
+          ballSpeedX = ballDistFromPaddleCenterX * 0.35;
+
+        }
+
+  }
+
+  function drawBricks() {
+    /*if(brickGrid[0]){
+      colorRect(0,0, BRICK_W -2,BRICK_H, 'blue')
+    }
+    if(brickGrid[1]){
+      colorRect(BRICK_W,0, BRICK_W-2,BRICK_H, 'blue')
+    }
+    if(brickGrid[2]){
+      colorRect(BRICK_W*2,0, BRICK_W-2,BRICK_H, 'blue')
+    }
+    if(brickGrid[3]){
+      colorRect(BRICK_W*3,0, BRICK_W-2,BRICK_H, 'blue')
+    }*/
+    for(var i=0;i<BRICK_COUNT;i++) {
+      if(brickGrid[i]) {
+        colorRect(BRICK_W*i,0, BRICK_W-2,BRICK_H, 'blue')
+      }
+    }
+
+  }
+
+  function drawAll(){
+    colorRect(0,0, canvas.width,canvas.height, 'black');
+
+    colorCircle(ballX,ballY, 10, 'white');
+
+    colorRect(paddleX, canvas.height-PADDLE_DIST_FROM_EDGE, PADDLE_WIDTH,PADDLE_THICKNESS, 'white');
+
+    drawBricks();
+
+    colorText(mouseX+","+mouseY, mouseX,mouseY, 'yellow')
+  }
+
+  function colorRect(topLeftX,topLeftY ,boxWidth,boxHeight, fillColor) {
+    canvasContext.fillStyle = fillColor;
+    canvasContext.fillRect(topLeftX,topLeftY ,boxWidth,boxHeight);
+  }
+
+  function colorCircle(centerX,centerY ,radius, fillColor) {
+    canvasContext.fillStyle = fillColor;
     canvasContext.beginPath();
-    canvasContext.arc(100,100, 10, 0, Math.PI*2, true);
+    canvasContext.arc(centerX, centerY, radius, 0, Math.PI*2, true);
     canvasContext.fill();
   }
 
+  function colorText(showWords, textX,textY, fillColor) {
+    canvasContext.fillStyle = fillColor;
+    canvasContext.fillText(showWords, textX,textY);
+  }
   </script>
 
 </body>
