@@ -36,7 +36,7 @@ function drawTracks() {
 
       var arrayIndex = rowColToArrayIndex(eachCol, eachRow);
       var tileKindHere = trackGrid[arrayIndex];
-      var useImg = flagPic;
+      var useImg;
 
       switch(tileKindHere){
         case TRACK_ROAD:
