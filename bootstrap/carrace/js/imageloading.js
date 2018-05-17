@@ -27,7 +27,7 @@ function loadImages() {
   {varName: wallPic, theFile: "wall.png"},
   {varName: goalPic, theFile: "track_goal.png"},
   {varName: treePic, theFile: "track_tree.png"},
-  {varName: flagPic, theFile: "Track_flag.png"}
+  {varName: flagPic, theFile: "track_flag.png"}
   ];
 
   picsToLoad = imageList.length;
