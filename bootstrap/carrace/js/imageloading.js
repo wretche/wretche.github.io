@@ -1,11 +1,12 @@
 var carPic = document.createElement("img");
+var otherCarPic = document.createElement("img");
 var trackPics = [];
 
 var picsToLoad = 0;
 
 function countLoadedImagesAndLaunchIfReady() {
   picsToLoad--;
-  console.log(picsToLoad);
+  //console.log(picsToLoad);
   if(picsToLoad == 0) {
     imageLoadingDoneSoStartGame();
   }
@@ -24,6 +25,7 @@ function loadImageForTrackCode(trackCode, fileName) {
 function loadImages() {
   var imageList = [
   {varName: carPic, theFile: "player1car.png"},
+  {varName: otherCarPic, theFile: "player2car.png"},
 
   {trackType: TRACK_ROAD, theFile: "road.png"},
   {trackType: TRACK_WALL, theFile: "wall.png"},
